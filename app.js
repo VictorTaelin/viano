@@ -518,3 +518,21 @@ document.addEventListener('click', () => {
     Tone.context.resume();
   }
 });
+
+// Add VIANO text to the center of the circle of fifths
+function addVianoText() {
+  const container = document.getElementById('circle-of-fifths');
+  const vianoText = document.createElement('div');
+  vianoText.style.position = 'absolute';
+  vianoText.style.top = '50%';
+  vianoText.style.left = '50%';
+  vianoText.style.transform = 'translate(-50%, -50%)';
+  vianoText.style.fontFamily = 'monospace';
+  vianoText.style.fontSize = '24px';
+  vianoText.style.zIndex = '4';
+  vianoText.innerHTML = '<strong>VI</strong>ANO';
+  container.appendChild(vianoText);
+}
+
+// Call this function after creating the circle of fifths
+addVianoText();
